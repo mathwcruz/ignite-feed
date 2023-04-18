@@ -69,11 +69,6 @@
   border-top: 1px solid var(--gray-600);
 }
 
-.post .commentForm:focus-within {
-  visibility: visible;
-  max-hegith: none;
-}
-
 .post .commentForm > strong {
   line-height: 1.6;
   color: var(--gray-100);
@@ -92,11 +87,6 @@
   margin-top: 1rem;
 }
 
-.post .commentForm footer {
-  visibility: hidden;
-  max-height: 0;
-}
-
 .post .commentForm footer > button {
   padding: 1rem 1.5rem;
   margin-top: 1rem;
@@ -109,7 +99,12 @@
   transition: background-color 0.1s;
 }
 
-.post .commentForm footer > button:hover {
+.post .commentForm footer > button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.post .commentForm footer > button:not(:disabled):hover {
   background: var(--green-300);
 }
 
