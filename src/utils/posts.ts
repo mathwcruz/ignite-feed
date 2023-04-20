@@ -1,4 +1,6 @@
-export const posts = [
+import { Post } from "../@types/post";
+
+export const posts: Post[] = [
   {
     id: 1,
     author: {

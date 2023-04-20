@@ -4,13 +4,14 @@ import ptBr from "date-fns/locale/pt-BR";
 
 import { Avatar } from "./Avatar";
 import { Comment } from "./Comment";
+import { Author } from "../@types/author";
+import { PostContent } from "../@types/post";
 
 import styles from "./Post.module.css";
-import { ArrowSquareDownRight } from "phosphor-react";
 
 interface PostProps {
-  author: { avatarUrl: string; name: string; role: string };
-  content: { type: string; content: string }[];
+  author: Author;
+  content: PostContent[];
   initialComments: string[];
   publishedAt: Date;
 }
